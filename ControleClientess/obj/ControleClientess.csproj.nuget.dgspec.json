@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\janaine_nardi\\Desktop\\JanaineNardi\\ControleClientess\\ControleClientess\\ControleClientess.csproj": {}
+    "C:\\Users\\hellen_skrzypczak\\Documents\\INTERFACE\\ControleClientess\\ControleClientess\\ControleClientess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\janaine_nardi\\Desktop\\JanaineNardi\\ControleClientess\\ControleClientess\\ControleClientess.csproj": {
+    "C:\\Users\\hellen_skrzypczak\\Documents\\INTERFACE\\ControleClientess\\ControleClientess\\ControleClientess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\janaine_nardi\\Desktop\\JanaineNardi\\ControleClientess\\ControleClientess\\ControleClientess.csproj",
+        "projectUniqueName": "C:\\Users\\hellen_skrzypczak\\Documents\\INTERFACE\\ControleClientess\\ControleClientess\\ControleClientess.csproj",
         "projectName": "ControleClientess",
-        "projectPath": "C:\\Users\\janaine_nardi\\Desktop\\JanaineNardi\\ControleClientess\\ControleClientess\\ControleClientess.csproj",
-        "packagesPath": "C:\\Users\\janaine_nardi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\janaine_nardi\\Desktop\\JanaineNardi\\ControleClientess\\ControleClientess\\obj\\",
+        "projectPath": "C:\\Users\\hellen_skrzypczak\\Documents\\INTERFACE\\ControleClientess\\ControleClientess\\ControleClientess.csproj",
+        "packagesPath": "C:\\Users\\hellen_skrzypczak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hellen_skrzypczak\\Documents\\INTERFACE\\ControleClientess\\ControleClientess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\janaine_nardi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hellen_skrzypczak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

@@ -31,7 +31,7 @@
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             tcCliente = new TabControl();
             tpClienteConsulta = new TabPage();
-            dataGridView1 = new DataGridView();
+            gridClientes = new DataGridView();
             colid = new DataGridViewTextBoxColumn();
             colNome = new DataGridViewTextBoxColumn();
             colEmail = new DataGridViewTextBoxColumn();
@@ -42,6 +42,19 @@
             btnVisualizar = new Button();
             btnNovo = new Button();
             tpClienteCadastro = new TabPage();
+            btnBuscarCEP = new Button();
+            label7 = new Label();
+            txtEstado = new TextBox();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            txtCidade = new TextBox();
+            txtBairro = new TextBox();
+            txtLogradouro = new TextBox();
+            label3 = new Label();
+            txtCep = new TextBox();
+            lblGenero = new Label();
+            cmbGenero = new ComboBox();
             panel1 = new Panel();
             btnSalvar = new Button();
             btnExcluir = new Button();
@@ -52,7 +65,7 @@
             label1 = new Label();
             tcCliente.SuspendLayout();
             tpClienteConsulta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridClientes).BeginInit();
             pnlPesquisar.SuspendLayout();
             pnlBotao.SuspendLayout();
             tpClienteCadastro.SuspendLayout();
@@ -73,7 +86,7 @@
             // 
             // tpClienteConsulta
             // 
-            tpClienteConsulta.Controls.Add(dataGridView1);
+            tpClienteConsulta.Controls.Add(gridClientes);
             tpClienteConsulta.Controls.Add(pnlPesquisar);
             tpClienteConsulta.Controls.Add(pnlBotao);
             tpClienteConsulta.Location = new Point(4, 24);
@@ -84,19 +97,19 @@
             tpClienteConsulta.Text = "Consulta";
             tpClienteConsulta.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // gridClientes
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colid, colNome, colEmail });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(3, 38);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(631, 267);
-            dataGridView1.TabIndex = 0;
+            gridClientes.AllowUserToAddRows = false;
+            gridClientes.AllowUserToDeleteRows = false;
+            gridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gridClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridClientes.Columns.AddRange(new DataGridViewColumn[] { colid, colNome, colEmail });
+            gridClientes.Dock = DockStyle.Fill;
+            gridClientes.Location = new Point(3, 38);
+            gridClientes.Name = "gridClientes";
+            gridClientes.ReadOnly = true;
+            gridClientes.Size = new Size(631, 267);
+            gridClientes.TabIndex = 0;
             // 
             // colid
             // 
@@ -189,6 +202,19 @@
             // 
             // tpClienteCadastro
             // 
+            tpClienteCadastro.Controls.Add(btnBuscarCEP);
+            tpClienteCadastro.Controls.Add(label7);
+            tpClienteCadastro.Controls.Add(txtEstado);
+            tpClienteCadastro.Controls.Add(label6);
+            tpClienteCadastro.Controls.Add(label5);
+            tpClienteCadastro.Controls.Add(label4);
+            tpClienteCadastro.Controls.Add(txtCidade);
+            tpClienteCadastro.Controls.Add(txtBairro);
+            tpClienteCadastro.Controls.Add(txtLogradouro);
+            tpClienteCadastro.Controls.Add(label3);
+            tpClienteCadastro.Controls.Add(txtCep);
+            tpClienteCadastro.Controls.Add(lblGenero);
+            tpClienteCadastro.Controls.Add(cmbGenero);
             tpClienteCadastro.Controls.Add(panel1);
             tpClienteCadastro.Controls.Add(txtEmail);
             tpClienteCadastro.Controls.Add(txtNome);
@@ -201,6 +227,121 @@
             tpClienteCadastro.TabIndex = 1;
             tpClienteCadastro.Text = "Cadastro";
             tpClienteCadastro.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCEP
+            // 
+            btnBuscarCEP.Location = new Point(146, 141);
+            btnBuscarCEP.Name = "btnBuscarCEP";
+            btnBuscarCEP.Size = new Size(52, 23);
+            btnBuscarCEP.TabIndex = 20;
+            btnBuscarCEP.Text = "button1";
+            btnBuscarCEP.UseVisualStyleBackColor = true;
+            btnBuscarCEP.Click += btnBuscarCEP_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(406, 171);
+            label7.Name = "label7";
+            label7.Size = new Size(42, 15);
+            label7.TabIndex = 19;
+            label7.Text = "Estado";
+            // 
+            // txtEstado
+            // 
+            txtEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtEstado.Location = new Point(406, 189);
+            txtEstado.Name = "txtEstado";
+            txtEstado.Size = new Size(109, 23);
+            txtEstado.TabIndex = 18;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(276, 171);
+            label6.Name = "label6";
+            label6.Size = new Size(44, 15);
+            label6.TabIndex = 17;
+            label6.Text = "Cidade";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(146, 171);
+            label5.Name = "label5";
+            label5.Size = new Size(38, 15);
+            label5.TabIndex = 16;
+            label5.Text = "Bairro";
+            label5.Click += label5_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(20, 171);
+            label4.Name = "label4";
+            label4.Size = new Size(69, 15);
+            label4.TabIndex = 15;
+            label4.Text = "Logradouro";
+            label4.Click += label4_Click;
+            // 
+            // txtCidade
+            // 
+            txtCidade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtCidade.Location = new Point(276, 189);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(109, 23);
+            txtCidade.TabIndex = 14;
+            // 
+            // txtBairro
+            // 
+            txtBairro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtBairro.Location = new Point(146, 189);
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(109, 23);
+            txtBairro.TabIndex = 13;
+            // 
+            // txtLogradouro
+            // 
+            txtLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtLogradouro.Location = new Point(20, 189);
+            txtLogradouro.Name = "txtLogradouro";
+            txtLogradouro.Size = new Size(109, 23);
+            txtLogradouro.TabIndex = 12;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(20, 123);
+            label3.Name = "label3";
+            label3.Size = new Size(28, 15);
+            label3.TabIndex = 11;
+            label3.Text = "CEP";
+            // 
+            // txtCep
+            // 
+            txtCep.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtCep.Location = new Point(20, 141);
+            txtCep.Name = "txtCep";
+            txtCep.Size = new Size(109, 23);
+            txtCep.TabIndex = 10;
+            txtCep.TextChanged += txtCep_TextChanged;
+            // 
+            // lblGenero
+            // 
+            lblGenero.AutoSize = true;
+            lblGenero.Location = new Point(509, 14);
+            lblGenero.Name = "lblGenero";
+            lblGenero.Size = new Size(45, 15);
+            lblGenero.TabIndex = 9;
+            lblGenero.Text = "Gênero";
+            // 
+            // cmbGenero
+            // 
+            cmbGenero.FormattingEnabled = true;
+            cmbGenero.Location = new Point(509, 30);
+            cmbGenero.Name = "cmbGenero";
+            cmbGenero.Size = new Size(121, 23);
+            cmbGenero.TabIndex = 8;
             // 
             // panel1
             // 
@@ -299,7 +440,7 @@
             Text = "Cadastro de Clientes";
             tcCliente.ResumeLayout(false);
             tpClienteConsulta.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridClientes).EndInit();
             pnlPesquisar.ResumeLayout(false);
             pnlPesquisar.PerformLayout();
             pnlBotao.ResumeLayout(false);
@@ -322,7 +463,7 @@
         private Button btnExcluir;
         private Button btnSalvar;
         private Button btnCancelar;
-        private DataGridView dataGridView1;
+        private DataGridView gridClientes;
         private Button btnPesquisar;
         private TextBox textBox1;
         private Button btnVisualizar;
@@ -333,5 +474,18 @@
         private DataGridViewTextBoxColumn colid;
         private DataGridViewTextBoxColumn colNome;
         private DataGridViewTextBoxColumn colEmail;
+        private ComboBox cmbGenero;
+        private Label lblGenero;
+        private Label label3;
+        private TextBox txtCep;
+        private Label label4;
+        private TextBox txtCidade;
+        private TextBox txtBairro;
+        private TextBox txtLogradouro;
+        private Label label5;
+        private Label label7;
+        private TextBox txtEstado;
+        private Label label6;
+        private Button btnBuscarCEP;
     }
 }
