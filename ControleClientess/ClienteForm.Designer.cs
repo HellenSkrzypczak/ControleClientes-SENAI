@@ -48,7 +48,6 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            txtCidade = new TextBox();
             txtBairro = new TextBox();
             txtLogradouro = new TextBox();
             label3 = new Label();
@@ -63,6 +62,7 @@
             txtNome = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            cmbCidade = new ComboBox();
             tcCliente.SuspendLayout();
             tpClienteConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridClientes).BeginInit();
@@ -80,7 +80,7 @@
             tcCliente.Location = new Point(-2, -27);
             tcCliente.Name = "tcCliente";
             tcCliente.SelectedIndex = 0;
-            tcCliente.Size = new Size(645, 368);
+            tcCliente.Size = new Size(664, 368);
             tcCliente.TabIndex = 6;
             tcCliente.TabStop = false;
             // 
@@ -92,7 +92,7 @@
             tpClienteConsulta.Location = new Point(4, 24);
             tpClienteConsulta.Name = "tpClienteConsulta";
             tpClienteConsulta.Padding = new Padding(3);
-            tpClienteConsulta.Size = new Size(637, 340);
+            tpClienteConsulta.Size = new Size(656, 340);
             tpClienteConsulta.TabIndex = 0;
             tpClienteConsulta.Text = "Consulta";
             tpClienteConsulta.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             gridClientes.Location = new Point(3, 38);
             gridClientes.Name = "gridClientes";
             gridClientes.ReadOnly = true;
-            gridClientes.Size = new Size(631, 267);
+            gridClientes.Size = new Size(650, 267);
             gridClientes.TabIndex = 0;
             // 
             // colid
@@ -140,14 +140,14 @@
             pnlPesquisar.Dock = DockStyle.Top;
             pnlPesquisar.Location = new Point(3, 3);
             pnlPesquisar.Name = "pnlPesquisar";
-            pnlPesquisar.Size = new Size(631, 35);
+            pnlPesquisar.Size = new Size(650, 35);
             pnlPesquisar.TabIndex = 0;
             // 
             // btnPesquisar
             // 
             btnPesquisar.Dock = DockStyle.Right;
             btnPesquisar.Image = Properties.Resources.icons8_pesquisar_16;
-            btnPesquisar.Location = new Point(544, 0);
+            btnPesquisar.Location = new Point(563, 0);
             btnPesquisar.Name = "btnPesquisar";
             btnPesquisar.Size = new Size(87, 35);
             btnPesquisar.TabIndex = 2;
@@ -161,7 +161,7 @@
             textBox1.Location = new Point(3, 3);
             textBox1.Name = "textBox1";
             textBox1.PlaceholderText = "Pesquisar por nome";
-            textBox1.Size = new Size(535, 23);
+            textBox1.Size = new Size(554, 23);
             textBox1.TabIndex = 1;
             // 
             // pnlBotao
@@ -171,14 +171,14 @@
             pnlBotao.Dock = DockStyle.Bottom;
             pnlBotao.Location = new Point(3, 305);
             pnlBotao.Name = "pnlBotao";
-            pnlBotao.Size = new Size(631, 32);
+            pnlBotao.Size = new Size(650, 32);
             pnlBotao.TabIndex = 2;
             // 
             // btnVisualizar
             // 
             btnVisualizar.Dock = DockStyle.Right;
             btnVisualizar.Image = Properties.Resources.icons8_olhos_16__1_1;
-            btnVisualizar.Location = new Point(469, 0);
+            btnVisualizar.Location = new Point(488, 0);
             btnVisualizar.Name = "btnVisualizar";
             btnVisualizar.Size = new Size(86, 32);
             btnVisualizar.TabIndex = 4;
@@ -191,7 +191,7 @@
             // 
             btnNovo.Dock = DockStyle.Right;
             btnNovo.Image = Properties.Resources.icons8_soma_161;
-            btnNovo.Location = new Point(555, 0);
+            btnNovo.Location = new Point(574, 0);
             btnNovo.Name = "btnNovo";
             btnNovo.Size = new Size(76, 32);
             btnNovo.TabIndex = 3;
@@ -202,13 +202,13 @@
             // 
             // tpClienteCadastro
             // 
+            tpClienteCadastro.Controls.Add(cmbCidade);
             tpClienteCadastro.Controls.Add(btnBuscarCEP);
             tpClienteCadastro.Controls.Add(label7);
             tpClienteCadastro.Controls.Add(txtEstado);
             tpClienteCadastro.Controls.Add(label6);
             tpClienteCadastro.Controls.Add(label5);
             tpClienteCadastro.Controls.Add(label4);
-            tpClienteCadastro.Controls.Add(txtCidade);
             tpClienteCadastro.Controls.Add(txtBairro);
             tpClienteCadastro.Controls.Add(txtLogradouro);
             tpClienteCadastro.Controls.Add(label3);
@@ -223,7 +223,7 @@
             tpClienteCadastro.Location = new Point(4, 24);
             tpClienteCadastro.Name = "tpClienteCadastro";
             tpClienteCadastro.Padding = new Padding(3);
-            tpClienteCadastro.Size = new Size(637, 340);
+            tpClienteCadastro.Size = new Size(656, 340);
             tpClienteCadastro.TabIndex = 1;
             tpClienteCadastro.Text = "Cadastro";
             tpClienteCadastro.UseVisualStyleBackColor = true;
@@ -252,7 +252,7 @@
             txtEstado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEstado.Location = new Point(406, 189);
             txtEstado.Name = "txtEstado";
-            txtEstado.Size = new Size(109, 23);
+            txtEstado.Size = new Size(128, 23);
             txtEstado.TabIndex = 18;
             // 
             // label6
@@ -284,20 +284,12 @@
             label4.Text = "Logradouro";
             label4.Click += label4_Click;
             // 
-            // txtCidade
-            // 
-            txtCidade.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            txtCidade.Location = new Point(276, 189);
-            txtCidade.Name = "txtCidade";
-            txtCidade.Size = new Size(109, 23);
-            txtCidade.TabIndex = 14;
-            // 
             // txtBairro
             // 
             txtBairro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtBairro.Location = new Point(146, 189);
             txtBairro.Name = "txtBairro";
-            txtBairro.Size = new Size(109, 23);
+            txtBairro.Size = new Size(128, 23);
             txtBairro.TabIndex = 13;
             // 
             // txtLogradouro
@@ -305,7 +297,7 @@
             txtLogradouro.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtLogradouro.Location = new Point(20, 189);
             txtLogradouro.Name = "txtLogradouro";
-            txtLogradouro.Size = new Size(109, 23);
+            txtLogradouro.Size = new Size(128, 23);
             txtLogradouro.TabIndex = 12;
             // 
             // label3
@@ -322,7 +314,7 @@
             txtCep.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtCep.Location = new Point(20, 141);
             txtCep.Name = "txtCep";
-            txtCep.Size = new Size(109, 23);
+            txtCep.Size = new Size(128, 23);
             txtCep.TabIndex = 10;
             txtCep.TextChanged += txtCep_TextChanged;
             // 
@@ -351,7 +343,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(3, 313);
             panel1.Name = "panel1";
-            panel1.Size = new Size(631, 24);
+            panel1.Size = new Size(650, 24);
             panel1.TabIndex = 7;
             // 
             // btnSalvar
@@ -359,7 +351,7 @@
             btnSalvar.Dock = DockStyle.Right;
             btnSalvar.Image = Properties.Resources.icons8_salvar_16;
             btnSalvar.ImageAlign = ContentAlignment.BottomLeft;
-            btnSalvar.Location = new Point(489, 0);
+            btnSalvar.Location = new Point(508, 0);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(64, 24);
             btnSalvar.TabIndex = 5;
@@ -387,7 +379,7 @@
             btnCancelar.Dock = DockStyle.Right;
             btnCancelar.Image = Properties.Resources.icons8_cancelar_16;
             btnCancelar.ImageAlign = ContentAlignment.BottomLeft;
-            btnCancelar.Location = new Point(553, 0);
+            btnCancelar.Location = new Point(572, 0);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(78, 24);
             btnCancelar.TabIndex = 4;
@@ -401,7 +393,7 @@
             txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtEmail.Location = new Point(20, 86);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(483, 23);
+            txtEmail.Size = new Size(502, 23);
             txtEmail.TabIndex = 3;
             // 
             // txtNome
@@ -409,7 +401,7 @@
             txtNome.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtNome.Location = new Point(16, 30);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(487, 23);
+            txtNome.Size = new Size(506, 23);
             txtNome.TabIndex = 2;
             // 
             // label2
@@ -430,11 +422,20 @@
             label1.TabIndex = 0;
             label1.Text = "Nome";
             // 
+            // cmbCidade
+            // 
+            cmbCidade.FormattingEnabled = true;
+            cmbCidade.Location = new Point(280, 189);
+            cmbCidade.Name = "cmbCidade";
+            cmbCidade.Size = new Size(121, 23);
+            cmbCidade.TabIndex = 21;
+            cmbCidade.SelectedIndexChanged += cmbCidade_SelectedIndexChanged;
+            // 
             // ClienteForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(644, 337);
+            ClientSize = new Size(663, 337);
             Controls.Add(tcCliente);
             Name = "ClienteForm";
             Text = "Cadastro de Clientes";
@@ -479,7 +480,6 @@
         private Label label3;
         private TextBox txtCep;
         private Label label4;
-        private TextBox txtCidade;
         private TextBox txtBairro;
         private TextBox txtLogradouro;
         private Label label5;
@@ -487,5 +487,6 @@
         private TextBox txtEstado;
         private Label label6;
         private Button btnBuscarCEP;
+        private ComboBox cmbCidade;
     }
 }

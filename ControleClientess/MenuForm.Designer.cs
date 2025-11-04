@@ -36,6 +36,7 @@
             ladoALadoHorizontalToolStripMenuItem = new ToolStripMenuItem();
             ladoALadoVerticalToolStripMenuItem = new ToolStripMenuItem();
             íconesMinimizadosToolStripMenuItem = new ToolStripMenuItem();
+            cadastroDeServiçosToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clienteToolStripMenuItem });
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { clienteToolStripMenuItem, cadastroDeServiçosToolStripMenuItem });
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             cadastroToolStripMenuItem.Size = new Size(66, 20);
             cadastroToolStripMenuItem.Text = "Cadastro";
@@ -58,7 +59,7 @@
             // clienteToolStripMenuItem
             // 
             clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            clienteToolStripMenuItem.Size = new Size(111, 22);
+            clienteToolStripMenuItem.Size = new Size(183, 22);
             clienteToolStripMenuItem.Text = "Cliente";
             clienteToolStripMenuItem.Click += clienteToolStripMenuItem_Click;
             // 
@@ -97,6 +98,13 @@
             íconesMinimizadosToolStripMenuItem.Text = "Ícones minimizados";
             íconesMinimizadosToolStripMenuItem.Click += íconesMinimizadosToolStripMenuItem_Click;
             // 
+            // cadastroDeServiçosToolStripMenuItem
+            // 
+            cadastroDeServiçosToolStripMenuItem.Name = "cadastroDeServiçosToolStripMenuItem";
+            cadastroDeServiçosToolStripMenuItem.Size = new Size(183, 22);
+            cadastroDeServiçosToolStripMenuItem.Text = "Cadastro de Serviços";
+            cadastroDeServiçosToolStripMenuItem.Click += cadastroDeServiçosToolStripMenuItem_Click;
+            // 
             // MenuForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -124,5 +132,6 @@
         private ToolStripMenuItem ladoALadoHorizontalToolStripMenuItem;
         private ToolStripMenuItem ladoALadoVerticalToolStripMenuItem;
         private ToolStripMenuItem íconesMinimizadosToolStripMenuItem;
+        private ToolStripMenuItem cadastroDeServiçosToolStripMenuItem;
     }
 }

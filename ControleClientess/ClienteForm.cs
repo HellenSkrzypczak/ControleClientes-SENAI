@@ -126,7 +126,7 @@ namespace ControleClientess
 
         private void btnBuscarCEP_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private async void btnBuscarCEP_Click(object sender, EventArgs e)
@@ -162,6 +162,11 @@ namespace ControleClientess
                     }
                 }
             }
+        }
+
+        private void cmbCidade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
